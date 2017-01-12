@@ -5,6 +5,7 @@ var autoprefixer = require('gulp-autoprefixer')
 var cleanCSS = require('gulp-clean-css')
 var sass = require('gulp-sass')
 var stylus = require('gulp-stylus')
+var cssnext = require('gulp-cssnext');
 var browserSync = require('browser-sync')
 
 gulp.task('browser-sync', function () {
@@ -52,10 +53,24 @@ gulp.task('styl', function () {
     .pipe(browserSync.reload({stream: true}))
 })
 
-gulp.task('styles', ['styl', 'scss'])
+gulp.task('postcss', function () {
+  return gulp.src('./postcss/marx.css')
+    .pipe(cssnext({
+      browsers: ['last 2 versions']
+    }))
+    .pipe(rename({suffix: '.postcss'}))
+    .pipe(gulp.dest('css/'))
+    .pipe(rename({suffix: '.min'}))
+    .pipe(cleanCSS({compatibility: 'ie8'}))
+    .pipe(gulp.dest('css/'))
+    .pipe(browserSync.reload({stream: true}))
+});
+
+gulp.task('styles', ['styl', 'scss', 'postcss'])
 
 gulp.task('default', ['browser-sync'], function () {
   gulp.watch('styl/**/*.styl', ['styl'])
   gulp.watch('scss/**/*.scss', ['scss'])
+  gulp.watch('postcss/**/*.css', ['postcss'])
   gulp.watch('*.html', ['bs-reload'])
 })

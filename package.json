@@ -45,6 +45,7 @@
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.0.2",
     "gulp-clean-css": "^2.0.4",
+    "gulp-cssnext": "^1.0.1",
     "gulp-plumber": "^1.0.1",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^2.0.4",
