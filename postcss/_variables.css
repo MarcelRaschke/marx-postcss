@@ -1,0 +1,56 @@
+:root {
+  /* Basic stylings */
+  --br: 4px;
+  --xs-pad: 4px;
+  --sm-pad: 8px;
+  --md-pad: 16px;
+  --lg-pad: 20px;
+  --xlg-pad: 40px;
+  --trans: .3s;
+
+  /* Breakpoints */
+  --small-breakpoint: 400px;
+  --large-breakpoint: 768px;
+
+  /* Colors */
+  --primary: #2196f3;
+  --primary-darken: #0c7cd5; /* --primary 10% darken */
+  --accent: #64ffda;
+  --red: #f44336;
+  --yellow: #ffeb3b;
+  --grey: #efefef;
+  --white: #fff;
+  --black: #000;
+
+  /* Text */
+  --text: rgba(0, 0, 0, .8);
+  --secondary: rgba(0, 0, 0, .54);
+  --disabled: rgba(0, 0, 0, .38);
+  --dividers: rgba(0, 0, 0, .12);
+
+  /* Links */
+  --link-color: var(--primary);
+  --link-color-darken: #0a6ebd; /* --link-color 15% darken */
+  --link-hover-color: var(--link-color-darken);
+
+  /* Font */
+  --sans-serif: 'Helvetica Neue', Helvetica, 'Lucida Grande', sans-serif;
+  --serif: Georgia, Times, 'Times New Roman', serif;
+  --monospace: Menlo, Monaco, Consolas, 'Courier New', monospace;
+  --font-family: var(--sans-serif);
+
+  /* Typography */
+  --font-size-base: 1rem;
+  --font-size-large: 1.25rem;
+  --font-size-small: 0.85rem;
+  --font-size-h1: 2.25rem;
+  --font-size-h2: 1.875rem;
+  --font-size-h3: 1.5rem;
+  --font-size-h4: 1.125rem;
+  --font-size-h5: var(--font-size-base);
+  --font-size-h6: var(--font-size-small);
+  --line-height-base: 1.4;
+
+  /* Other */
+  --border: 1px solid var(--dividers);
+}

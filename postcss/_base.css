@@ -1,0 +1,59 @@
+main,
+header,
+footer,
+article,
+section,
+aside,
+details,
+summary {
+  margin: 0 auto;
+  margin-bottom: var(--md-pad);
+  width: 100%;
+}
+
+main {
+  display: block;
+  margin: 0 auto;
+  max-width: var(--large-breakpoint);
+  padding: 0 var(--md-pad) var(--md-pad);
+}
+
+footer {
+  border-top: var(--border);
+  clear: both;
+  display: inline-block;
+  float: left;
+  max-width: 100%;
+  padding: var(--md-pad) 0;
+  text-align: center;
+}
+footer p {
+  margin-bottom: 0;
+}
+
+hr {
+  border-top: var(--border);
+  display: block;
+  margin-bottom: var(--md-pad);
+  width: 100%;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+  vertical-align: baseline;
+}
+
+@media screen and (max-width: var(--small-breakpoint)) {
+  article,
+  section,
+  aside {
+    clear: both;
+    display: block;
+    max-width: 100%;
+  }
+
+  img {
+    margin-right: var(--md-pad);
+  }
+}
